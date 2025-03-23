@@ -1,0 +1,12 @@
+services:
+  chatboot:
+    image: chatboot
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: chatboot_container
+    ports:
+      - 8000:8000
+    # Forward environment variable to container
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}

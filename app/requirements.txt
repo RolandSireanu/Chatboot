@@ -1,7 +1,13 @@
-dotenv
+websockets
 langchain_openai
 langchain_community
 langchain_core
 langchain_community
 pypdf
 chromadb
+fastapi
+uvicorn
+ipdb
+python-multipart
+starlette
+itsdangerous

@@ -5,7 +5,16 @@ By using a docker container as it's main deployment environment, it facilitates 
 As a prerequisite for this project you need an OPEN_API_KEY set in your env variables.
 
 Build docker image:
-`docker build -t <img_name> .`
+docker-compose build
 
 Run docker container:
-`docker run -it --rm -e OPENAI_API_KEY=$OPENAI_API_KEY <img_name>`
+docker-compose up
+
+In order to interact with the chatboot you can use client/client.py application.
+Both sides are using websocket for data communication and have the following API:
+1. Upload a pdf file to server (as input for RAG)
+"/upload path_to_file"
+
+2. Address a question
+"question to address"
+
